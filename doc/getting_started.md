@@ -49,13 +49,13 @@ Discuss anything related to the concept at https://groups.google.com/forum/#!for
 ### 4. Your contribution
 This is an open source project, which means that contributions from other people are welcome, and crucial to success. In fact, the recommended implementation will always refer to somebody's implementation. You may implement the concept just for practice, or you may implement it to be the fastest one available and become the recommended implementation for everybody else to use. Feel free to learn from other people's implementations.
 
-Place your implementation files in your own directory, e.g. impl/YOURUSERNAME/concrete/foo/bar.hpp.
+Place your implementation files in your own directory, e.g. ```impl/YOURUSERNAME/concrete/foo/bar.hpp```.
 
-Most concepts will be announced together with test and benchmark suite, located in impl/concrete/foo/bar_test.hpp.
+Most concepts will be announced together with test and benchmark suite, located in ```impl/concrete/foo/bar_test.hpp```.
 
-To test your implementation, simple edit impl/concrete/foo/bar.cpp.  
-You should see #include directives for every existing implementation at the top. Add your implementation there.  
-Below, you should TESTER_ADD_IMPLEMENTATION lines where tests for existing implentations are instantiated. Add your implementation there as well.
+To test your implementation, simple edit ```impl/concrete/foo/bar.cpp```.  
+You should see ```#include``` directives for every existing implementation at the top. Add your implementation there.  
+Below, you should ```TESTER_ADD_IMPLEMENTATION``` lines where tests for existing implentations are instantiated. Add your implementation there as well.
 
 That's it. You can now run the test using the run_test.sh script in the root directory.
 ```
