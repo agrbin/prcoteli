@@ -1,4 +1,4 @@
-# Programing Contest Template Library - PrCoTeLi
+# Programming Contest Template Library - PrCoTeLi
 
 This getting started guide assumes you are running Linux, and have a gcc compiler that can compile C++11 code.
 
@@ -31,14 +31,16 @@ Concepts are defined using text comments. For example:
 // * Has the operator[](int index) const method that returns the value or the
 //   reference to the value at a given index.
 ```
+Concepts usually come with a working non-optimal implementation, which you are advised to look at to better undestand the interface. For example, https://github.com/lukakalinovcic/prcoteli/blob/master/impl/kalinov/array/vector_backed_dynamic_array.hpp implements the DynamicArray interface.
 
-In addition to that, for every concept SomeConcept we provide the struct IsSomeConcept, which uses Boost's concept check library to write checks which should primarily make your error messages nicer, in case your interface doesn't match the specification. You don't have to understand or use the code that is written there.
+In addition to that, for every concept SomeConcept we provide the struct IsSomeConcept, which uses Boost's concept check library to write checks which should primarily make your compilation error messages nicer, in case your interface doesn't match the specification. You don't have to understand or use the code that is written there.
 
 Files in ```concepts/abstract/...``` define high level concepts that don't have a concrete implementation.  
-For example, ```concepts/abstract/array/array.hpp``` specifies what methods the class that implements IsInsertableArray must have, but you can't instantiate a class called InsertableArray.
+For example, the Array concept above is an abstract concept, and there is no Array class to instantiate.
 
-Files in ```concepts/concrete/...``` define concepts that we implement.  
-The recommended implementation for a concept defined in concept/concrete/foo/bar.hpp is located in impl/concrete/foo/bar.hpp.
+Files in ```concepts/concrete/...``` define concepts that we want to implement.  
+For every concrete concept, we keep track of the "recommended" implementation. That is, among all implementation, we chose the best one. Most commonly we'll chose the fastest one.
+The recommended implementation for a concept defined in ```concept/concrete/foo/bar.hpp``` is located in ```impl/concrete/foo/bar.hpp```.
 
 Subscribe to https://groups.google.com/forum/#!forum/prcoteli-announce for announcements whenever a new concept is posted.
 
@@ -101,3 +103,5 @@ Your github repository will only be updated once you push to it.
 ### 6. Have fun
 
 If you run into problems setting up your workspace, don't hesitate to write to https://groups.google.com/forum/#!forum/prcoteli-discuss.
+
+This is still an early stage of the project, so please bear with me if something goes wrong. Also, please don't spread the word about this project just yet, as we first want to make sure everything is set up correctly.
