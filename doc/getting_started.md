@@ -94,7 +94,7 @@ I'll have a look at your changes, may comment if I see some problems, and finall
 
 ### 5. Syncing your repository with the master repository
 ```
-git pull upstream
+git pull upstream master
 ```
 You should now have the latest version of the master repository on your computer. If you made changes to a file that somebody else modified in the meantime, you'll have to resolve the conflict. The only file that multiple people should touch are _test.cpp files, which are quite simple, and conflicts should be trivial to resolve.
 
