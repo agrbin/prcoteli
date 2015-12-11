@@ -1,24 +1,25 @@
-Programing Contest Template Library - PrCoTeLi
+# Programing Contest Template Library - PrCoTeLi
 
 This getting started guide assumes you are running Linux, and have a gcc compiler that can compile C++11 code.
 
-0. Set up your GitHub account:
+### 0. Set up your GitHub account:
 If you don't have a github account yet, set up one at https://github.com/join.
 
-1. Fork PrCoTeLi master repository:
+### 1. Fork PrCoTeLi master repository:
 Navigate to https://github.com/lukakalinovcic/prcoteli, and click on the Fork button in the upper right corner.
 You should now see the code at https://github.com/<youraccount>/prcoteli.
 
-2. Create your local repository, where you'll write your code:
+### 2. Create your local repository, where you'll write your code:
 Open the terminal and position yourself into a local working directory.
   git clone https://github.com/<youraccount>/prcoteli.git
   git remote add upstream https://github.com/lukakalinovcic/prcoteli.git
 You should now see the "prcoteli" directory. This is your local copy of the code.
 
-3. Concepts:
+### 3. Concepts:
 This projects tries to capture data structures and algorithms that often appear in programming competitions as concepts, and implement those concepts as a template library.
 
 Concepts are defined using text comments. For example:
+```
 // Array is a concept with these properties:
 // * The type of contained values is defined as "value_type".
 // * A default constructor with no arguments that creates an empty array.
@@ -28,6 +29,7 @@ Concepts are defined using text comments. For example:
 //   can be converted to int.
 // * Has the operator[](int index) const method that returns the value or the
 //   reference to the value at a given index.
+```
 
 In addition to that, for every concept X we provide the struct IsX, which uses Boost's concept check library to write checks which should primarily make your error messages nicer, if your interface doesn't match the specification.
 
@@ -40,7 +42,7 @@ The recommended implementation for a concept defined in concept/concrete/foo/bar
 Subscribe to https://groups.google.com/forum/#!forum/prcoteli-announce for announcements whenever a new concept is posted.
 Discuss anything related to the concept at https://groups.google.com/forum/#!forum/prcoteli-discuss.
 
-4. Your contribution:
+### 4. Your contribution:
 This is an open source project, which means that contributions from other people are welcome, and crucial to success. In fact, the recommended implementation will always refer to somebody's implementation. You may implement the concept just for practice, or you may implement it to be the fastest one available and become the recommended implementation for everybody else to use. Feel free to learn from other people's implementations.
 
 Place your implementation files in your own directory, e.g. impl/<yourusername>/concrete/foo/bar.hpp.
@@ -71,7 +73,7 @@ You should now see changes at https://github.com/<youraccount>/prcoteli. On the 
 If you like what you see, you can create the pull request.
 I'll have a look at your changes, may comment if I see some problems, and finally I'll merge your changes into the master repository.
 
-5. Syncing your repository with the master repository.
+### 5. Syncing your repository with the master repository.
   git fetch upstream
   git merge upstream/master
 
