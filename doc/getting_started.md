@@ -32,12 +32,12 @@ Concepts are defined using text comments. For example:
 //   reference to the value at a given index.
 ```
 
-In addition to that, for every concept X we provide the struct IsX, which uses Boost's concept check library to write checks which should primarily make your error messages nicer, if your interface doesn't match the specification.
+In addition to that, for every concept SomeConcept we provide the struct IsSomeConcept, which uses Boost's concept check library to write checks which should primarily make your error messages nicer, in case your interface doesn't match the specification. You don't have to understand or use the code that is written there.
 
-Files in concepts/abstract/... define high level concepts that don't have a concrete implementation.  
-For example, concepts/abstract/array/array.hpp specifies what methods the class that implements IsInsertableArray must have, but you can't instantiate a class called InsertableArray.
+Files in ```concepts/abstract/...``` define high level concepts that don't have a concrete implementation.  
+For example, ```concepts/abstract/array/array.hpp``` specifies what methods the class that implements IsInsertableArray must have, but you can't instantiate a class called InsertableArray.
 
-Files in concepts/concrete/... define concepts that we implement.  
+Files in ```concepts/concrete/...``` define concepts that we implement.  
 The recommended implementation for a concept defined in concept/concrete/foo/bar.hpp is located in impl/concrete/foo/bar.hpp.
 
 Subscribe to https://groups.google.com/forum/#!forum/prcoteli-announce for announcements whenever a new concept is posted.
@@ -56,21 +56,35 @@ You should see #include directives for every existing implementation at the top.
 Below, you should TESTER_ADD_IMPLEMENTATION lines where tests for existing implentations are instantiated. Add your implementation there as well.
 
 That's it. You can now run the test using the run_test.sh script in the root directory.
-```run_test.sh concrete/dynamic_array```
+```
+run_test.sh concrete/dynamic_array
+```
 To run tests for your implementation only type:
-```run_test.sh concrete/dynamic_array YOURUSERNAME```
+```
+run_test.sh concrete/dynamic_array YOURUSERNAME
+```
 
 Once tests pass, you can run benchmarks to see how it performs against other implementations:
-```run_benchmarh.sh concrete/dynamic_array```
+```
+run_benchmarh.sh concrete/dynamic_array
+```
 
 To see every file that you have modified, added or removed, type:
-```git status```
+```
+git status
+```
 For every added file type:
-```git add path/to/file```
+```
+git add path/to/file
+```
 Commit changes by typing:
-```git commit -m 'Some message describing the change' -a```
+```
+git commit -m 'Some message describing the change' -a
+```
 Push changes to your github branch by typing:
-```git push -u origin master```
+```
+git push -u origin master
+```
 You should now see changes at https://github.com/YOURACCOUNT/prcoteli. On the right side you can find the "Compare" link, which will once again show your contribution.
 
 If you like what you see, you can create the pull request.  
@@ -78,9 +92,12 @@ I'll have a look at your changes, may comment if I see some problems, and finall
 
 ### 5. Syncing your repository with the master repository
 ```
-git fetch upstream
-git merge upstream/master
+git pull upstream
 ```
 You should now have the latest version of the master repository on your computer. If you made changes to a file that somebody else modified in the meantime, you'll have to resolve the conflict. The only file that multiple people should touch are _test.cpp files, which are quite simple, and conflicts should be trivial to resolve.
 
 Your github repository will only be updated once you push to it.
+
+### 6. Have fun
+
+If you run into problems setting up your workspace, don't hesitate to write to https://groups.google.com/forum/#!forum/prcoteli-discuss.
