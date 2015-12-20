@@ -6,12 +6,15 @@ This getting started guide assumes you are running Linux, and have a gcc compile
 If you don't have a GitHub account yet, set up one at https://github.com/join.
 
 ### 1. Fork PrCoTeLi master repository
-Navigate to https://github.com/lukakalinovcic/prcoteli, and click on the Fork button in the upper right corner. You should now see the code at https://github.com/YOURACCOUNT/prcoteli.
+Navigate to https://github.com/lukakalinovcic/prcoteli, and click on the Fork
+button in the upper right corner. You should now see the code at
+https://github.com/$USER/prcoteli. $USER should contain your github account
+name.
 
 ### 2. Create your local repository, where you'll write your code
 Open the terminal and position yourself into a local working directory.
 ```
-  git clone https://github.com/YOURACCOUNT/prcoteli.git
+  git clone https://github.com/$USER/prcoteli.git
   git remote add upstream https://github.com/lukakalinovcic/prcoteli.git
 ```
 You should now see the "prcoteli" directory. This is your local copy of the code.
@@ -87,7 +90,7 @@ Push changes to your github branch by typing:
 ```
 git push -u origin master
 ```
-You should now see changes at https://github.com/YOURACCOUNT/prcoteli. On the right side you can find the "Compare" link, which will once again show your contribution.
+You should now see changes at https://github.com/$USER/prcoteli. On the right side you can find the "Compare" link, which will once again show your contribution.
 
 If you like what you see, you can create the pull request.  
 I'll have a look at your changes, may comment if I see some problems, and finally I'll merge your changes into the master repository.
