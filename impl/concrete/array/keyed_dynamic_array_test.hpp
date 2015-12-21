@@ -1,12 +1,14 @@
 #ifndef __IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_HPP__
 #define __IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_HPP__
 
+#include <algorithm>
 #include <chrono>
 #include <functional>
 #include <iostream>
 #include <random>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "boost/concept_check.hpp"
@@ -119,7 +121,6 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
     return true;
   }
 
-
   bool TestCompareAgainstReference(int seed) {
     default_random_engine rng_ref(seed);
     default_random_engine rng_test(seed);
@@ -198,7 +199,8 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
       } else {
         int key_index = uniform_int_distribution<int>(0, keys.size() - 1)(*rng);
         if (i % 3 == 1) {
-          keys.push_back(array->InsertBeforeKey(keys[key_index], ValueType(-1)));
+          keys.push_back(
+              array->InsertBeforeKey(keys[key_index], ValueType(-1)));
         } else {
           keys.push_back(array->InsertAfterKey(keys[key_index], ValueType(-1)));
         }
@@ -211,6 +213,6 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
   }
 };
 
-}  // testing
+}  // namespace testing
 
 #endif  // __IMPL_KEYED_CONCRETE_ARRAY_DYNAMIC_ARRAY_TEST_HPP__

@@ -7,7 +7,7 @@ namespace kalinov {
 
 using namespace std;
 
-template<typename T>
+template <typename T>
 class VectorBackedDynamicArray {
  public:
   typedef T value_type;

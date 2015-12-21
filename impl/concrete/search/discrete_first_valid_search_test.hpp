@@ -8,6 +8,7 @@
 #include <random>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "boost/concept_check.hpp"
@@ -40,7 +41,7 @@ class DiscreteFirstValidSearchTests : public Tests {
   }
 
   bool TestSimple() {
-    auto predicate = [] (long long x) { return x >= 5; };
+    auto predicate = [](long long x) { return x >= 5; };
     Impl searcher(predicate);
     {
       long long result;
@@ -65,7 +66,7 @@ class DiscreteFirstValidSearchTests : public Tests {
     auto t1 = chrono::high_resolution_clock::now();
 
     {
-      Impl searcher([n] (long long x) {return x >= n-1;});
+      Impl searcher([n](long long x) { return x >= n - 1; });
       long long result;
       searcher.FindFirstValid(0, n, &result);
     }
@@ -74,9 +75,8 @@ class DiscreteFirstValidSearchTests : public Tests {
     auto runtime = chrono::duration_cast<chrono::duration<double>>(t2 - t1);
     return make_pair(runtime.count() < 1.0, runtime.count());
   }
-
 };
 
-}  // testing
+}  // namespace testing
 
 #endif  // __IMPL_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_TEST_HPP__

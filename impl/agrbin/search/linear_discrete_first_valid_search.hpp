@@ -5,13 +5,13 @@
 
 namespace agrbin {
 
-template<typename T>
+template <typename T>
 class LinearDiscreteFirstValidSearch {
  public:
   typedef T value_type;
 
-  LinearDiscreteFirstValidSearch(std::function<bool(T)> predicate) :
-    predicate(predicate) {}
+  LinearDiscreteFirstValidSearch(std::function<bool(T)> predicate)
+      : predicate(predicate) {}
 
   bool FindFirstValid(value_type lo, value_type hi, value_type *result) const {
     for (value_type i = lo; i < hi; ++i) {

@@ -13,6 +13,6 @@ TESTER_BEGIN(KeyedDynamicArray)
 TESTER_ADD_IMPLEMENTATION(kalinov::ListBackedKeyedDynamicArray);
 TESTER_END()
 
-}  // testing
+}  // namespace testing
 
 TESTER_MAIN()

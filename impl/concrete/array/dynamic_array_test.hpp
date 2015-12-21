@@ -8,6 +8,7 @@
 #include <random>
 #include <sstream>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "boost/concept_check.hpp"
@@ -43,8 +44,9 @@ class DynamicArrayTests : public Tests {
     this->AddTest(
         "DynamicArrayTests::TestConstructAndRemoveAll",
         std::bind(&DynamicArrayTests::TestConstructAndRemoveAll, this));
-    this->AddTest("DynamicArrayTests::TestBinarySearchInsertionSort",
-                  std::bind(&DynamicArrayTests::TestBinarySearchInsertionSort, this));
+    this->AddTest(
+        "DynamicArrayTests::TestBinarySearchInsertionSort",
+        std::bind(&DynamicArrayTests::TestBinarySearchInsertionSort, this));
     this->AddTest(
         "DynamicArrayTests::TestCompareAgainstRecommended1",
         std::bind(&DynamicArrayTests::TestCompareAgainstRecommended, this,
@@ -144,7 +146,8 @@ class DynamicArrayTests : public Tests {
     return true;
   }
 
-  pair<bool, double> BenchmarkBinarySearchInsertionSort(int level, string* message) {
+  pair<bool, double> BenchmarkBinarySearchInsertionSort(int level,
+                                                        string* message) {
     int n = 1000;
     for (int i = 0; i < level; ++i) n = n * 2;
     ostringstream oss;
@@ -234,9 +237,8 @@ class DynamicArrayTests : public Tests {
     auto index_generator = [array, rng]() {
       return uniform_int_distribution<int>(0, array->size())(*rng);
     };
-    auto value_generator = [rng]() {
-      return uniform_int_distribution<int>(0, 1000000)(*rng);
-    };
+    auto value_generator =
+        [rng]() { return uniform_int_distribution<int>(0, 1000000)(*rng); };
     for (int i = 0; i < n; ++i) {
       array->Insert(index_generator(), ValueType(value_generator()));
     }
@@ -253,6 +255,6 @@ class DynamicArrayTests : public Tests {
   }
 };
 
-}  // testing
+}  // namespace testing
 
 #endif  // __IMPL_CONCRETE_ARRAY_DYNAMIC_ARRAY_TEST_HPP__

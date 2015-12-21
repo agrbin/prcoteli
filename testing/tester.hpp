@@ -5,6 +5,7 @@
 #include <memory>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "testing/tests.hpp"
@@ -14,24 +15,24 @@ namespace testing {
 using namespace std;
 
 typedef pair<string, std::unique_ptr<Tests>> ClassNameAndTests;
-ClassNameAndTests MakeClassNameAndTests(string const& class_name, Tests* tests) {
+ClassNameAndTests MakeClassNameAndTests(string const& class_name,
+                                        Tests* tests) {
   ClassNameAndTests ret;
   ret.first = class_name;
   ret.second.reset(tests);
   return ret;
 }
 
-string _concept_name;
+const char* _concept_name;
 vector<ClassNameAndTests> _tests;
 void InitTester();
 
 #define TESTER_BEGIN(concept_name) \
-  void InitTester() {             \
+  void InitTester() {              \
     _concept_name = #concept_name;
 #define TESTER_ADD(class_name, tests) \
   _tests.push_back(MakeClassNameAndTests(class_name, tests))
-#define TESTER_END() \
-  }
+#define TESTER_END() }
 
 void NoTestsRun() {
   if (_tests.empty()) {
@@ -98,8 +99,8 @@ void Run(int argc, char* args[]) {
     if (arg == "--test_only") {
       test_only = true;
     } else if (arg == "--benchmark_only") {
-      benchmark_only = true; }
-    else {
+      benchmark_only = true;
+    } else {
       arguments.push_back(arg);
     }
   }
@@ -109,7 +110,7 @@ void Run(int argc, char* args[]) {
   if (!test_only) RunBenchmarks(arguments);
 }
 
-}  // testing
+}  // namespace testing
 
 #define TESTER_MAIN()                \
   int main(int argc, char* args[]) { \

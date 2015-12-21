@@ -71,9 +71,7 @@ template <class T>
 struct IsRemovableArray : IsArray<T> {
   typedef typename T::value_type value_type;
 
-  BOOST_CONCEPT_USAGE(IsRemovableArray) {
-    array.Remove(0);
-  }
+  BOOST_CONCEPT_USAGE(IsRemovableArray) { array.Remove(0); }
   T array;
 };
 

@@ -29,9 +29,7 @@ struct IsDiscreteFirstValidSearch {
   typedef typename T::value_type value_type;
 
   BOOST_CONCEPT_USAGE(IsDiscreteFirstValidSearch) {
-    auto predicate = [] (value_type x) {
-      return x < 5;
-    };
+    auto predicate = [](value_type x) { return x < 5; };
     T searcher(predicate);
     value_type lo;
     value_type hi;

@@ -5,7 +5,7 @@ namespace yourusername {
 
 using namespace std;
 
-template<typename T>
+template <typename T>
 class MyTurboDataStructure {
  public:
  private:

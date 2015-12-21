@@ -8,7 +8,7 @@ namespace kalinov {
 
 using namespace std;
 
-template<typename T>
+template <typename T>
 class ListBackedKeyedDynamicArray {
  public:
   typedef typename list<T>::iterator key_type;
@@ -59,9 +59,7 @@ class ListBackedKeyedDynamicArray {
     a.erase(it);
   }
 
-  void RemoveKey(key_type key) {
-    a.erase(key);
-  }
+  void RemoveKey(key_type key) { a.erase(key); }
 
   value_type const& Get(key_type key) const { return *key; }
   value_type& Get(key_type key) { return *key; }

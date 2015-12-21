@@ -5,6 +5,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
 
 namespace testing {
@@ -25,8 +26,9 @@ class Tests {
     tests_.push_back(Test{test_name, test_method});
   }
 
-  void AddBenchmark(string benchmark_name,
-                    std::function<pair<bool, double>(int, string*)> benchmark_method) {
+  void AddBenchmark(
+      string benchmark_name,
+      std::function<pair<bool, double>(int, string*)> benchmark_method) {
     benchmarks_.push_back(Benchmark{benchmark_name, benchmark_method});
   }
 
@@ -40,7 +42,7 @@ class Tests {
 
   void RunAllBenchmarks() {
     for (Benchmark& benchmark : benchmarks_) {
-      for (int level = 0; ; ++level) {
+      for (int level = 0;; ++level) {
         cerr << "    Running benchmark: " << benchmark.name << " at level "
              << level << " ... ";
         string message;
@@ -83,6 +85,6 @@ class Tests {
     return false;                                   \
   }
 
-}  // testing
+}  // namespace testing
 
 #endif  // __TESTING_TESTS_HPP__
