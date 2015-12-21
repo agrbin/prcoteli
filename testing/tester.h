@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-#include "testing/tests.hpp"
+#include "testing/tests.h"
 
 namespace testing {
 

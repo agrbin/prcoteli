@@ -9,7 +9,7 @@ This repo uses Google-like code style.
 ```
 wget https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py
 chmod +x cpplint.py
-./cpplint.py --extensions=cpp,hpp $(find impl/ concepts/ testing/ -type f)
+./cpplint.py --extensions=cc,h $(find impl/ concepts/ testing/ -type f)
 ```
 
 To automatically solve most of the style violations, install clang-format and

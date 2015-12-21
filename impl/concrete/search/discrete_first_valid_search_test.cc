@@ -1,8 +1,8 @@
-#include "impl/concrete/search/discrete_first_valid_search_test.hpp"
-#include "testing/tester.hpp"
+#include "impl/concrete/search/discrete_first_valid_search_test.h"
+#include "testing/tester.h"
 
 // A list of DiscreteFirstValidSearch implementations:
-#include "impl/agrbin/search/linear_discrete_first_valid_search.hpp"
+#include "impl/agrbin/search/linear_discrete_first_valid_search.h"
 
 namespace testing {
 

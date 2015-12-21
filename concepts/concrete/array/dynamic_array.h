@@ -4,7 +4,7 @@
 #define __CONCEPTS_CONCRETE_ARRAY_DYNAMIC_ARRAY_HPP__
 
 #include "boost/concept_check.hpp"
-#include "concepts/abstract/array/array.hpp"
+#include "concepts/abstract/array/array.h"
 
 namespace concepts {
 

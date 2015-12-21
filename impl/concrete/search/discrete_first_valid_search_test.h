@@ -12,8 +12,8 @@
 #include <vector>
 
 #include "boost/concept_check.hpp"
-#include "concepts/concrete/search/discrete_first_valid_search.hpp"
-#include "testing/tests.hpp"
+#include "concepts/concrete/search/discrete_first_valid_search.h"
+#include "testing/tests.h"
 
 namespace testing {
 

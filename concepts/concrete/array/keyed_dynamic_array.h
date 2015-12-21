@@ -21,7 +21,7 @@
 #define __CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
 
 #include "boost/concept_check.hpp"
-#include "concepts/concrete/array/dynamic_array.hpp"
+#include "concepts/concrete/array/dynamic_array.h"
 
 namespace concepts {
 

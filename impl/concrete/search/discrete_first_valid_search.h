@@ -2,7 +2,7 @@
 #define __IMPL_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_HPP__
 
 // Recommended implementation (typically the best one on the benchmark):
-#include "impl/agrbin/search/linear_discrete_first_valid_search.hpp"
+#include "impl/agrbin/search/linear_discrete_first_valid_search.h"
 
 template <class T>
 class DiscreteFirstValidSearch
