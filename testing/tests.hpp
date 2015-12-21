@@ -2,6 +2,7 @@
 #define __TESTING_TESTS_HPP__
 
 #include <iomanip>
+#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
