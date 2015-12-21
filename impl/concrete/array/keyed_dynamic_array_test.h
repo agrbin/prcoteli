@@ -1,5 +1,5 @@
-#ifndef __IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_HPP__
-#define __IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_HPP__
+#ifndef IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_H_
+#define IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_H_
 
 #include <algorithm>
 #include <chrono>
@@ -215,4 +215,4 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
 
 }  // namespace testing
 
-#endif  // __IMPL_KEYED_CONCRETE_ARRAY_DYNAMIC_ARRAY_TEST_HPP__
+#endif  // IMPL_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_TEST_H_

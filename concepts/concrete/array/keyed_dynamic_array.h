@@ -17,8 +17,8 @@
 // * Has GetIndex(key_type key) const method which returns the index of the
 //   element specified by the key.
 
-#ifndef __CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
-#define __CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
+#ifndef CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_H_
+#define CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_H_
 
 #include "boost/concept_check.hpp"
 #include "concepts/concrete/array/dynamic_array.h"
@@ -49,4 +49,4 @@ struct IsKeyedDynamicArray : IsDynamicArray<T> {
 
 }  // namespace concepts
 
-#endif  // __CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
+#endif  // CONCEPTS_CONCRETE_ARRAY_KEYED_DYNAMIC_ARRAY_H_

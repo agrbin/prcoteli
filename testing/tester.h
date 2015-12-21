@@ -1,5 +1,5 @@
-#ifndef __TESTING_TESTER_HPP__
-#define __TESTING_TESTER_HPP__
+#ifndef TESTING_TESTER_H_
+#define TESTING_TESTER_H_
 
 #include <iomanip>
 #include <memory>
@@ -118,4 +118,4 @@ void Run(int argc, char* args[]) {
     return 0;                        \
   }
 
-#endif  // __TESTING_TESTER_HPP__
+#endif  // TESTING_TESTER_H_

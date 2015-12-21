@@ -17,8 +17,8 @@
 // If method returns false then
 // - All elements are invalid: predicate(y) == false, for y >= lo && y < hi.
 
-#ifndef __CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_HPP__
-#define __CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_HPP__
+#ifndef CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_H_
+#define CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_H_
 
 #include "boost/concept_check.hpp"
 
@@ -40,4 +40,4 @@ struct IsDiscreteFirstValidSearch {
 
 }  // namespace concepts
 
-#endif  // __CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_HPP__
+#endif  // CONCEPTS_CONCRETE_SEARCH_DISCRETE_FIRST_VALID_SEARCH_H_

@@ -1,0 +1,14 @@
+#ifndef IMPL_YOURUSERNAME_MY_TURBO_DATA_STRUCTURE_H_
+#define IMPL_YOURUSERNAME_MY_TURBO_DATA_STRUCTURE_H_
+
+namespace yourusername {
+
+using namespace std;
+
+template <typename T>
+class MyTurboDataStructure {
+ public:
+ private:
+};
+
+}  // namespace yourusername
