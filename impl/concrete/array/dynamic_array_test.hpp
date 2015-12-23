@@ -130,8 +130,8 @@ class DynamicArrayTests : public Tests {
     default_random_engine rng_test(seed);
     DynamicArray<ValueType> array_ref;
     DynamicArrayImpl<ValueType> array_test;
-    InsertRandomElements(100, &array_ref, &rng_ref);
-    InsertRandomElements(100, &array_test, &rng_test);
+    InsertRandomElements(1000, &array_ref, &rng_ref);
+    InsertRandomElements(1000, &array_test, &rng_test);
     for (int iter = 0; iter < 10; ++iter) {
       RemoveRandomElements(10, &array_ref, &rng_ref);
       RemoveRandomElements(10, &array_test, &rng_test);
