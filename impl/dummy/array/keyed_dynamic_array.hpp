@@ -1,5 +1,5 @@
-#ifndef __IMPL_DUMMY_KEYED_DYNAMIC_ARRAY_HPP__
-#define __IMPL_DUMMY_KEYED_DYNAMIC_ARRAY_HPP__
+#ifndef __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
+#define __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
 
 #include <iterator>
 #include <list>
@@ -85,4 +85,4 @@ class KeyedDynamicArray {
 
 }  // namespace dummy
 
-#endif  // __IMPL_DUMMY_KEYED_DYNAMIC_ARRAY_HPP__
+#endif  // __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
