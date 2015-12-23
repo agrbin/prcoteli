@@ -1,8 +1,9 @@
 // Array is a concept with these properties:
 // * The type of contained values is defined as "value_type".
-// * A default constructor with no arguments that creates an empty array.
-// * A constructor with the initial size as an argument that creates an array of
-//   that many elements.
+// * Has a default constructor with no arguments that creates an empty array.
+// * Has a constructor with the initial size as an argument that creates an
+//   array of that many elements.
+// * Has a constructor template that copies from another array.
 // * Has the size() const method that returns an int or a value that
 //   can be converted to int.
 // * Has the operator[](int index) const method that returns the value or the

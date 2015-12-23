@@ -20,6 +20,11 @@ class KeyedDynamicArray {
     for (int i = 0; i < n; ++i) a.emplace_back();
   }
 
+  template<typename A>
+  KeyedDynamicArray(A const& array) {
+    for (int i = 0; i < array.size(); ++i) a.push_back(array[i]);
+  }
+
   int size() const { return a.size(); }
 
   value_type const& operator[](int index) const {

@@ -13,13 +13,24 @@ class DynamicArray {
   typedef T value_type;
 
   DynamicArray() {}
+
   DynamicArray(int n) : a(n) {}
+
+  template<typename A>
+  DynamicArray(A const& array) {
+    for (int i = 0; i < array.size(); ++i) a.push_back(array[i]);
+  }
+
   int size() const { return a.size(); }
+
   value_type const& operator[](int index) const { return a[index]; }
+
   value_type& operator[](int index) { return a[index]; }
+
   void Insert(int index, value_type value) {
     a.insert(a.begin() + index, value);
   }
+
   void Remove(int index) { a.erase(a.begin() + index); }
 
  private:

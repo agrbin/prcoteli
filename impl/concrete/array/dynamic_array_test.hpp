@@ -38,6 +38,8 @@ class DynamicArrayTests : public Tests {
   void RegisterTests() {
     this->AddTest("DynamicArrayTests::TestSimple",
                   std::bind(&DynamicArrayTests::TestSimple, this));
+    this->AddTest("DynamicArrayTests::TestConstructFromVector",
+                  std::bind(&DynamicArrayTests::TestConstructFromVector, this));
     this->AddTest("DynamicArrayTests::TestInsertAndRemoveAll",
                   std::bind(&DynamicArrayTests::TestInsertAndRemoveAll, this));
     this->AddTest(
@@ -86,6 +88,21 @@ class DynamicArrayTests : public Tests {
     array.Remove(1);
     CHECK(array.size() == 3);
     CHECK(array[0].value == 2);
+    CHECK(array[1].value == 4);
+    CHECK(array[2].value == 3);
+    return true;
+  }
+
+  bool TestConstructFromVector() {
+    vector<ValueType> values;
+    values.push_back(ValueType(1));
+    values.push_back(ValueType(2));
+    values.push_back(ValueType(3));
+    DynamicArrayImpl<ValueType> array(values);
+    array.Remove(1);
+    array.Insert(1, ValueType(4));
+    CHECK(array.size() == 3);
+    CHECK(array[0].value == 1);
     CHECK(array[1].value == 4);
     CHECK(array[2].value == 3);
     return true;
