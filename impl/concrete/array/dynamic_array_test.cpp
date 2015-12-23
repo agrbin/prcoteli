@@ -2,8 +2,8 @@
 #include "testing/tester.hpp"
 
 // A list of DynamicArray implementations:
-#include "impl/kalinov/array/vector_backed_dynamic_array.hpp"
-#include "impl/kalinov/array/list_backed_keyed_dynamic_array.hpp"
+#include "impl/dummy/array/dynamic_array.hpp"
+#include "impl/dummy/array/keyed_dynamic_array.hpp"
 
 namespace testing {
 
@@ -11,8 +11,8 @@ namespace testing {
   TESTER_ADD(#ClassName, new DynamicArrayTests<ClassName>())
 
 TESTER_BEGIN(DynamicArray)
-TESTER_ADD_IMPLEMENTATION(kalinov::VectorBackedDynamicArray);
-TESTER_ADD_IMPLEMENTATION(kalinov::ListBackedKeyedDynamicArray);
+TESTER_ADD_IMPLEMENTATION(dummy::DynamicArray);
+TESTER_ADD_IMPLEMENTATION(dummy::KeyedDynamicArray);
 TESTER_END()
 
 }  // testing

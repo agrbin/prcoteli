@@ -2,7 +2,7 @@
 #include "testing/tester.hpp"
 
 // A list of KeyedDynamicArray implementations:
-#include "impl/kalinov/array/list_backed_keyed_dynamic_array.hpp"
+#include "impl/dummy/array/keyed_dynamic_array.hpp"
 
 namespace testing {
 
@@ -10,7 +10,7 @@ namespace testing {
   TESTER_ADD(#ClassName, new KeyedDynamicArrayTests<ClassName>())
 
 TESTER_BEGIN(KeyedDynamicArray)
-TESTER_ADD_IMPLEMENTATION(kalinov::ListBackedKeyedDynamicArray);
+TESTER_ADD_IMPLEMENTATION(dummy::KeyedDynamicArray);
 TESTER_END()
 
 }  // testing
