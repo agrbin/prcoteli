@@ -1,5 +1,5 @@
-#ifndef TESTING_TESTS_H_
-#define TESTING_TESTS_H_
+#ifndef TESTING_TESTS_HPP_
+#define TESTING_TESTS_HPP_
 
 #include <iomanip>
 #include <iostream>
@@ -87,4 +87,4 @@ class Tests {
 
 }  // namespace testing
 
-#endif  // TESTING_TESTS_H_
+#endif  // TESTING_TESTS_HPP_

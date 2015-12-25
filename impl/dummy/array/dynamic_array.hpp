@@ -1,5 +1,5 @@
-#ifndef __IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP__
-#define __IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP__
+#ifndef IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP_
+#define IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP_
 
 #include <vector>
 
@@ -39,4 +39,4 @@ class DynamicArray {
 
 }  // namespace dummy
 
-#endif  // __IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP__
+#endif  // IMPL_DUMMY_ARRAY_DYNAMIC_ARRAY_HPP_
