@@ -51,11 +51,11 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
         std::bind(&KeyedDynamicArrayTests::TestCompareAgainstReference, this,
                   /*seed=*/1));
     this->AddTest(
-        "KeyedDynamicArrayTests::TestCompareAgainstReference1",
+        "KeyedDynamicArrayTests::TestCompareAgainstReference2",
         std::bind(&KeyedDynamicArrayTests::TestCompareAgainstReference, this,
                   /*seed=*/2));
     this->AddTest(
-        "KeyedDynamicArrayTests::TestCompareAgainstReference1",
+        "KeyedDynamicArrayTests::TestCompareAgainstReference3",
         std::bind(&KeyedDynamicArrayTests::TestCompareAgainstReference, this,
                   /*seed=*/3));
 
@@ -100,7 +100,7 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
 
   bool TestRemoveFromFirstHalfGetIndexInSecondHalf() {
     KeyedDynamicArrayImpl<ValueType> array;
-    int n = 100;
+    int n = 500;
     key_type middle = array.Insert(0, ValueType());
     vector<key_type> first_half;
     vector<key_type> second_half;
@@ -190,7 +190,7 @@ class KeyedDynamicArrayTests : public DynamicArrayTests<KeyedDynamicArrayImpl> {
 
   template <typename A>
   void InsertGetAndGetIndex(int n, A* array, default_random_engine* rng) {
-    vector<key_type> keys;
+    vector<typename A::key_type> keys;
     for (int i = 0; i < n; ++i) {
       if (i % 3 == 0) {
         keys.push_back(

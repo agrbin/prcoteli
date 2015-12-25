@@ -1,23 +1,28 @@
-#ifndef IMPL_KALINOV_ARRAY_LIST_BACKED_KEYED_DYNAMIC_ARRAY_H_
-#define IMPL_KALINOV_ARRAY_LIST_BACKED_KEYED_DYNAMIC_ARRAY_H_
+#ifndef __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
+#define __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
 
 #include <iterator>
 #include <list>
 
-namespace kalinov {
+namespace dummy {
 
 using namespace std;
 
 template <typename T>
-class ListBackedKeyedDynamicArray {
+class KeyedDynamicArray {
  public:
   typedef typename list<T>::iterator key_type;
   typedef T value_type;
 
-  ListBackedKeyedDynamicArray() {}
+  KeyedDynamicArray() {}
 
-  ListBackedKeyedDynamicArray(int n) {
+  KeyedDynamicArray(int n) {
     for (int i = 0; i < n; ++i) a.emplace_back();
+  }
+
+  template <typename A>
+  KeyedDynamicArray(A const& array) {
+    for (int i = 0; i < array.size(); ++i) a.push_back(array[i]);
   }
 
   int size() const { return a.size(); }
@@ -76,6 +81,6 @@ class ListBackedKeyedDynamicArray {
   list<value_type> a;
 };
 
-}  // namespace kalinov
+}  // namespace dummy
 
-#endif  // IMPL_KALINOV_ARRAY_LIST_BACKED_KEYED_DYNAMIC_ARRAY_H_
+#endif  // __IMPL_DUMMY_ARRAY_KEYED_DYNAMIC_ARRAY_HPP__
