@@ -12,9 +12,9 @@
 #include <vector>
 
 #include "boost/concept_check.hpp"
-#include "concepts/concrete/array/dynamic_array.h"
-#include "impl/concrete/array/dynamic_array.h"
-#include "testing/tests.h"
+#include "concepts/concrete/array/dynamic_array.hpp"
+#include "impl/concrete/array/dynamic_array.hpp"
+#include "testing/tests.hpp"
 
 namespace testing {
 
