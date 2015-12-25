@@ -4,13 +4,15 @@
 
 ## Code health
 
-This repo uses Google-like code style.
+This repo uses some of the Google code style conventions. Check the style with:
 
 ```
-wget https://raw.githubusercontent.com/google/styleguide/gh-pages/cpplint/cpplint.py
-chmod +x cpplint.py
-./cpplint.py --extensions=cpp,hpp $(find impl/ concepts/ testing/ -type f)
+./run_lint.sh
 ```
+
+If you are unhappy with the lint results, feel free to blacklist the lint
+category in CPPLINT.cfg. We are using linter mostly to check that our include
+guards are appropriate (unique).
 
 To automatically solve most of the style violations, install clang-format and
 run
