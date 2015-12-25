@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# NOTE(agrbin): This cpplint.py is hacked to work with include guards for
+# '.hpp' files. All but first instances of 'h' were replaced with 'hpp'.
 #
 # Copyright (c) 2009 Google Inc. All rights reserved.
 #
