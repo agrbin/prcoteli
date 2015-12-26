@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Koncepti</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

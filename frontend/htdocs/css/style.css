@@ -1,0 +1,76 @@
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #000066;
+  font-size: 0.8em;
+  margin: 0 0 0 0;
+}
+
+#container {
+  border: 1px solid #aaaaaa;
+  background-color: #eeeeee;
+  margin: 50px;
+  overflow: hidden;
+  padding: 10px 10px 30px 10px;
+}
+
+#nav {
+  width: 180px;
+  float: left;
+  margin-top: 15px;
+}
+
+#main {
+  margin-left: 200px;
+  max-width: 600px;
+}
+
+/* sidebar */
+
+#nav ul {
+  list-style-type: none;
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+#nav li {
+  padding: 5px;
+}
+
+#nav a {
+  text-decoration: none;
+  color: #0000cc;
+  font-weight: bold;
+  margin: 1px 0px 1px 5px;
+}
+
+#nav a:link {
+}
+
+#nav a:visited {
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
+#nav a:active {
+  text-decoration: underline;
+}
+
+/* contests and tasks */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #0000cc;
+}
+
+.clearfix {
+  clear: both;
+}

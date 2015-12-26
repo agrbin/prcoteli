@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Koncepti
+{% endblock %}
+
+{#
+        self.class_name = attr['class_name']
+        self.concept_name = attr['concept_name']
+        self.dummy_impl_hpp = attr['dummy_impl_hpp']
+        self.concept_test_hpp = attr['concept_test_hpp']
+        self.concept_hpp = attr['concept_hpp']
+#}
+
+{% block content %}
+  <h2>Koncepti</h2>
+
+  {% for concept in concepts %}
+  <h3>{{ concept.concept_name }}</h3>
+
+  {#
+  <table class="years">
+    {% set year_min = (years|sort|first)//10*10    %}
+    {% set year_max = (years|sort|last)//10*10+10 %}
+    {% for yearRow in range(year_min, year_max)|batch(10) %}
+    <tr>
+      {% for year in yearRow %}
+      <td>
+      {% if year in years %}
+        <a href="contests/{{ name }}_{{ year }}.html">{{ year }}</a>
+      {% else %}
+        -
+      {% endif %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  #}
+
+  {% endfor %}
+
+{% endblock %}

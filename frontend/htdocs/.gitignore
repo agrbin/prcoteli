@@ -1,0 +1,10 @@
+# This directory will contain some generated htmls that we want to ignore.
+# I spent some time while trying to convince git to do what I want:
+#   - ignore everything except files in css/ and js/ dirs.
+/*
+/*/
+!.gitignore
+!/css/
+!/css/*
+!/js/
+!/js/*
