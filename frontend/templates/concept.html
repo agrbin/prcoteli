@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h2>{{ concept.concept_name }}</h2>
+{% endblock %}
+
+{% block content %}
+  <h2>{{ concept.class_name }}</h2>
+  <pre>{{ concept.concept_hpp }}</pre>
+{% endblock %}
