@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="hr">
+  <head>
+    <base href="../" />
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>
+<h2>array/dynamic_array</h2>
+</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Koncepti</a></li>
+        </ul>
+      </div>
+      <div id="main">
+        
+  <h2>DynamicArray</h2>
+  <pre>// DynamicArray is an Array that is mutable, insertable and removable.
+
+#ifndef __CONCEPTS_CONCRETE_ARRAY_DYNAMIC_ARRAY_HPP__
+#define __CONCEPTS_CONCRETE_ARRAY_DYNAMIC_ARRAY_HPP__
+
+#include "boost/concept_check.hpp"
+#include "concepts/abstract/array/array.hpp"
+
+namespace concepts {
+
+template <class T>
+struct IsDynamicArray : IsMutableArray<T>,
+                        IsInsertableArray<T>,
+                        IsRemovableArray<T> {};
+
+}  // namespace concepts
+
+#endif  // __CONCEPTS_CONCRETE_ARRAY_DYNAMIC_ARRAY_HPP__
+</pre>
+
+      </div>
+    </div>
+  </body>
+</html>
